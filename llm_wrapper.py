@@ -1,6 +1,8 @@
 import json
 import requests
 
+import sys
+
 url = "http://localhost:11434/api/chat"
 
 def get_response(prompt):
@@ -25,4 +27,9 @@ def get_response(prompt):
 
 
 if __name__ == "__main__":
-    print(get_response("What is the capital of France?"))
+    argv = sys.argv
+
+    user_input = print(argv[1])
+
+
+    print(get_response(user_input))
