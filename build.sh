@@ -1,3 +1,13 @@
+echo "Checking Ollama installation"
+
+if command -v ollama &> /dev/null; then
+    echo "Ollama is installed"
+    ollama --version
+else
+    echo "No Ollama installation found"
+    exit 1
+fi
+
 echo "Creating virtual environment"
 
 VENV_DIR="myenv"
